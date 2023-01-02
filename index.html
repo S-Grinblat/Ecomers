@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="keywords"> 
+  <meta content="Ecomers"> 
+  <meta name="description" content="Ecomers de Zapatillas en donde se puede ver y comprar el producto">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>E-commerce product page</title>
+</head>
+<body>
+  <main id="main-container">
+    <header class="header">
+      <div class="header__navigation">
+        <img src="svg/icon-menu.svg" alt="Menu icon" class="header__menu">
+        <img src="svg/logo.svg" alt="Logo" class="header__logo">  
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li><a class="navbar__link" href="#">Collections</a></li>
+            <li><a class="navbar__link" href="#">Men</a></li>
+            <li><a class="navbar__link" href="#">Women</a></li>
+            <li><a class="navbar__link" href="#">about</a></li>
+            <li><a class="navbar__link" href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- inicio modal navbar -->
+      <div class="modal-navbar__background show">
+        <nav class="modal-navbar">
+          <img class="modal-navbar__close-icon" src="svg/icon-close.svg" alt="cerrar">
+          <ul class="modal-navbar__items">
+            <li><a class="modal-navbar__link" href="#">Collections</a></li>
+            <li><a class="modal-navbar__link" href="#">Men</a></li>
+            <li><a class="modal-navbar__link" href="#">Women</a></li>
+            <li><a class="modal-navbar__link" href="#">about</a></li>
+            <li><a class="modal-navbar__link" href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- final modal navbar -->
+
+      <div class="header__cart-avatar">
+        <div class="header__cart">
+          <div class="header__cart--notification">0</div>
+          <img class="header-icon-carrito" src="images/icon-cart.jpg" alt="carrito">
+        </div>
+        <img class="header__avatar" src="images/image-avatar.png" alt="Avatar">
+      </div>
+    </header>
+
+    <section class="content">
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img class="gallery__previous" src="svg/icon-previous.svg" alt="Previous">
+          <img class="gallery__next" src="svg/icon-next.svg" alt="Next">
+        </div>
+        <div class="gallery__thumbnails">
+          <img id="1" class="gallery__thumbnail" src="images/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <img id="2" class="gallery__thumbnail" src="images/image-product-2-thumbnail.jpg" alt="thumbnail">
+          <img id="3" class="gallery__thumbnail" src="images/image-product-3-thumbnail.jpg" alt="thumbnail">
+          <img id="4" class="gallery__thumbnail" src="images/image-product-4-thumbnail.jpg" alt="thumbnail">
+        </div>
+      </article>
+
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h3 class="details__title">Fall Limited Edition Sneakers</h3>
+        <p class="product-title">Details Product.</p>
+        <p class="details__description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p> 
+        <a href="#details" class="product-link">Mas Detalles</a>
+        <div class="details__prices">
+          <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+          <p class="details__before">$250.00</p>
+          <p class="details__shipping">Shipping Free</p>
+        </div>
+        <div class="details__products-quantity">
+          <div class="input">
+            <img class="input__minus" src="svg/icon-minus.svg" alt="minus">
+            <input class="input__number" type="text" placeholder="0">
+            <img class="input__plus" src="svg/icon-plus.svg" alt="plus">
+          </div>
+          <button class="details__button"> <img src="images/icon-cart-white.jpg" alt="icon cart"> Add to cart</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- inicio cart modal -->
+    <div class="cart-modal show">
+      <p class="cart-modal__title">Cart</p>
+      <div class="cart-modal__chekout-container">
+        <div class="cart-modal__details-container">
+          <img class="cart-modal__image" src="images/image-product-1-thumbnail.jpg" alt="image product">
+          <div>
+            <p class="cart-modal__details-product">Autumn Limited Edition...</p>
+            <p class="cart-modal__details-price">$125.00 x3 <span>375.00</span> </p>
+          </div>
+          <img class="cart-modal__details-delete" src="svg/icon-delete.svg" alt="delete">
+        </div>
+        <button class="cart-modal__delete">Checkout</button>
+      </div>
+    </div>
+    <!-- final cart modal -->
+
+    <!-- inicio gallery modal -->
+    <div class="modal-gallery__background">
+      <article class="modal-gallery">
+        <div class="modal-gallery__close-container">
+          <img class="modal-gallery__close" src="svg/icon-close-orange.svg" alt="close">
+        </div>
+        <div class="modal-gallery__image-container">
+          <img class="modal-gallery__previous" src="svg/icon-previous.svg" alt="Previous">
+          <img class="modal-gallery__next" src="svg/icon-next.svg" alt="Next">
+        </div>
+        <div class="modal-gallery__thumbnails">
+          <img id="m1" class="modal-gallery__thumbnail" src="images/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <img id="m2" class="modal-gallery__thumbnail" src="images/image-product-2-thumbnail.jpg" alt="thumbnail">
+          <img id="m3" class="modal-gallery__thumbnail" src="images/image-product-3-thumbnail.jpg" alt="thumbnail">
+          <img id="m4" class="modal-gallery__thumbnail" src="images/image-product-4-thumbnail.jpg" alt="thumbnail">
+        </div>
+      </article>
+    </div>
+    <!-- final gallery modal -->
+
+    <!-- inicio modal detalles -->
+    <div id="details-products__container">
+      <div class="modal-navbar__background__details">
+        <section class="talles">
+          <h3 class="talles-title">Sizes</h3>
+          <p class="talles-info">LARGE, UNISEX<br>
+          For smaller feet we recommend smaller sizes.</p>
+          <figure class="img-container">
+            <img class="img-details" src="images/image-product-1.jpg" alt="zapatillas">
+          </figure>
+          <div class="sizes">
+            <button class="sizes-button">36 (US 4.5)</button>
+            <button class="sizes-button">36.5 (US 5)</button>
+            <button class="sizes-button">37.5 (US 5.5)</button>
+            <button class="sizes-button">38 (US 6)</button>
+            <button class="sizes-button">38.5 (US 6.5)</button>
+            <button class="sizes-button">39 (US 7)</button>
+            <button class="sizes-button">39.5 (US 7.5)</button>
+            <button class="sizes-button">40 (US 8)</button>
+            <button class="sizes-button">41 (US 8.5)</button>
+            <button class="sizes-button">41.5 (US 9)</button>
+            <button class="sizes-button">42 (US 9.5)</button>
+            <button class="sizes-button">42.5 (US 10)</button>
+          </div>
+        </section>
+        <section class="info">
+          <div class="container-details__product">
+            <img src="images/pedidos.jpg" alt="pedido" class="icon-details__product">
+            <p class="details-product">Free Shipping</p>
+          </div>
+          <div class="container-details__product">
+            <img src="images/dinero.jpg" alt="dinero" class="icon-details__product">
+            <p class="details-product">Pay up to 3 installments without interest</p>
+          </div>
+          <div class="container-details__product">
+            <img src="images/pedido.jpg" alt="caja" class="icon-details__product">
+            <p class="details-product">Free Returns</p>
+          </div>
+          <div class="container-details__product">
+            <img src="images/candado.jpg" alt=candado" class="icon-details__product">
+            <p class="details-product">Protected Purchases</p>
+          </div>
+        </section>
+        <a class="return-home" href="#main-container">Volver al home</a>
+      </div>
+    </div>
+    <!-- final modal detalles -->
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
