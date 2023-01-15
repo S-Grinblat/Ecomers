@@ -18,8 +18,7 @@
         <img src="svg/logo.svg" alt="Logo" class="header__logo">  
         <nav class="navbar">
           <ul class="navbar__items">
-            <li><a class="navbar__link" href="#">Collections</a></li>
-            <li><a class="navbar__link" href="#">Men</a></li>
+            <li><a class="navbar__link" href="index.html">Men</a></li>
             <li><a class="navbar__link" href="#">Women</a></li>
             <li><a class="navbar__link" href="#">about</a></li>
             <li><a class="navbar__link" href="#">contact</a></li>
@@ -32,8 +31,7 @@
         <nav class="modal-navbar">
           <img class="modal-navbar__close-icon" src="svg/icon-close.svg" alt="cerrar">
           <ul class="modal-navbar__items">
-            <li><a class="modal-navbar__link" href="#">Collections</a></li>
-            <li><a class="modal-navbar__link" href="#">Men</a></li>
+            <li><a class="modal-navbar__link" href="index.html">Men</a></li>
             <li><a class="modal-navbar__link" href="#">Women</a></li>
             <li><a class="modal-navbar__link" href="#">about</a></li>
             <li><a class="modal-navbar__link" href="#">contact</a></li>
@@ -58,10 +56,10 @@
           <img class="gallery__next" src="svg/icon-next.svg" alt="Next">
         </div>
         <div class="gallery__thumbnails">
-          <img id="1" class="gallery__thumbnail" src="images/image-product-1-thumbnail.jpg" alt="thumbnail">
-          <img id="2" class="gallery__thumbnail" src="images/image-product-2-thumbnail.jpg" alt="thumbnail">
-          <img id="3" class="gallery__thumbnail" src="images/image-product-3-thumbnail.jpg" alt="thumbnail">
-          <img id="4" class="gallery__thumbnail" src="images/image-product-4-thumbnail.jpg" alt="thumbnail">
+          <img id="1" class="gallery__thumbnail" src="images/image-product-1-thumbnail.webp" alt="thumbnail">
+          <img id="2" class="gallery__thumbnail" src="images/image-product-2-thumbnail.webp" alt="thumbnail">
+          <img id="3" class="gallery__thumbnail" src="images/image-product-3-thumbnail.webp" alt="thumbnail">
+          <img id="4" class="gallery__thumbnail" src="images/image-product-4-thumbnail.webp" alt="thumbnail">
         </div>
       </article>
 
@@ -92,14 +90,22 @@
       <p class="cart-modal__title">Cart</p>
       <div class="cart-modal__chekout-container">
         <div class="cart-modal__details-container">
-          <img class="cart-modal__image" src="images/image-product-1-thumbnail.jpg" alt="image product">
+          <img class="cart-modal__image" src="images/image-product-1-thumbnail.webp" alt="image product">
           <div>
             <p class="cart-modal__details-product">Autumn Limited Edition...</p>
             <p class="cart-modal__details-price">$125.00 x3 <span>375.00</span> </p>
           </div>
           <img class="cart-modal__details-delete" src="svg/icon-delete.svg" alt="delete">
         </div>
-        <button class="cart-modal__delete">Checkout</button>
+        <button class="cart-modal__delete" id="checkout">Checkout</button>
+      </div>
+      <div class="checkout-product">
+        <div class="cart-modal__checkout">
+          <p class="chekout-text">Comprado</p>
+          <figure>
+            <img class="checkout__img" src="svg/checkout.svg" alt="image product">
+          </figure>
+        </div>
       </div>
     </div>
     <!-- final cart modal -->
@@ -115,10 +121,10 @@
           <img class="modal-gallery__next" src="svg/icon-next.svg" alt="Next">
         </div>
         <div class="modal-gallery__thumbnails">
-          <img id="m1" class="modal-gallery__thumbnail" src="images/image-product-1-thumbnail.jpg" alt="thumbnail">
-          <img id="m2" class="modal-gallery__thumbnail" src="images/image-product-2-thumbnail.jpg" alt="thumbnail">
-          <img id="m3" class="modal-gallery__thumbnail" src="images/image-product-3-thumbnail.jpg" alt="thumbnail">
-          <img id="m4" class="modal-gallery__thumbnail" src="images/image-product-4-thumbnail.jpg" alt="thumbnail">
+          <img id="m1" class="modal-gallery__thumbnail" src="images/image-product-1-thumbnail.webp" alt="thumbnail">
+          <img id="m2" class="modal-gallery__thumbnail" src="images/image-product-2-thumbnail.webp" alt="thumbnail">
+          <img id="m3" class="modal-gallery__thumbnail" src="images/image-product-3-thumbnail.webp" alt="thumbnail">
+          <img id="m4" class="modal-gallery__thumbnail" src="images/image-product-4-thumbnail.webp" alt="thumbnail">
         </div>
       </article>
     </div>
@@ -132,7 +138,7 @@
           <p class="talles-info">LARGE, UNISEX<br>
           For smaller feet we recommend smaller sizes.</p>
           <figure class="img-container">
-            <img class="img-details" src="images/image-product-1.jpg" alt="zapatillas">
+            <img class="img-details" src="images/image-product-1.webp" alt="zapatillas">
           </figure>
           <div class="sizes">
             <button class="sizes-button">36 (US 4.5)</button>
@@ -149,6 +155,7 @@
             <button class="sizes-button">42.5 (US 10)</button>
           </div>
         </section>
+
         <section class="info">
           <div class="container-details__product">
             <img src="images/pedidos.jpg" alt="pedido" class="icon-details__product">
@@ -173,5 +180,6 @@
     <!-- final modal detalles -->
   </main>
   <script src="index.js"></script>
+
 </body>
 </html>

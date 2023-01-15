@@ -7,6 +7,7 @@ const cartIconBtn = document.querySelector(".header__cart");
 const menuIcon = document.querySelector(".header__menu");
 const cartModal = document.querySelector(".cart-modal");
 const productContainer = document.querySelector(".cart-modal__chekout-container");
+const productCheckout = document.querySelector(".checkout-product");
 const imageContainer = document.querySelector(".gallery__image-container");
 const previousGalleryBtn = document.querySelector(".gallery__previous");
 const nextGalleryBtn = document.querySelector(".gallery__next");
@@ -47,6 +48,7 @@ cartIconBtn.addEventListener("click", () => {
     } else {
         drawProductInModal();
     }
+    productCheckout.style.display = 'none';
 });
 function deleteProduct() {
 const deleteProductBtn = document.querySelector(".cart-modal__details-delete");
@@ -59,10 +61,10 @@ const deleteProductBtn = document.querySelector(".cart-modal__details-delete");
 
 let imgIndex = 1;
 const imagesUrls = [
-    'images/image-product-1.jpg',
-    'images/image-product-2.jpg',
-    'images/image-product-3.jpg',
-    'images/image-product-4.jpg'
+    'images/image-product-1.webp',
+    'images/image-product-2.webp',
+    'images/image-product-3.webp',
+    'images/image-product-4.webp',
 ]
 nextGalleryBtn.addEventListener("click", () => {
     changeNextImage(imageContainer)
@@ -80,7 +82,7 @@ iconPreviousModalBtn.addEventListener("click", () => {
     changePreviousImage(modalImageContainer)
 })
 iconNextModalBtn.addEventListener("click", () => {
-    changePreviousImage(modalImageContainer)
+    changeNextImage(modalImageContainer)
 })
 menuIcon.addEventListener("click", () => {
     modalBackground.style.display = 'block';
@@ -96,13 +98,14 @@ link.addEventListener('click', () => {
 returnLink.addEventListener('click', () => {
     modalDetails.style.display = 'none';
 })
+
 function changeNextImage(imgContainer) {
     if(imgIndex === 4){
         imgIndex = 1;
     } else {
         imgIndex++;
     }
-    imgContainer.style.backgroundImage = `url('images/image-product-${imgIndex}.jpg')`;
+    imgContainer.style.backgroundImage = `url('images/image-product-${imgIndex}.webp')`;
 }
 function changePreviousImage(imgContainer) {
     if(imgIndex === 1){
@@ -110,29 +113,36 @@ function changePreviousImage(imgContainer) {
     } else {
         imgIndex--;
     }
-    imgContainer.style.backgroundImage = `url('images/image-product-${imgIndex}.jpg')`;
+    imgContainer.style.backgroundImage = `url('images/image-product-${imgIndex}.webp')`;
 }
 function drawProductInModal() {
     productContainer.innerHTML = `<div class="cart-modal__chekout-container">
         <div class="cart-modal__details-container">
-            <img class="cart-modal__image" src="images/image-product-1-thumbnail.jpg" alt="">
+            <img class="cart-modal__image" src="images/image-product-1-thumbnail.webp" alt="">
             <div>
                 <p class="cart-modal__details-product">Autumn Limited Edition...</p>
                 <p class="cart-modal__details-price">$125.00 x3 <span>375.00</span> </p>
             </div>
             <img class="cart-modal__details-delete" src="svg/icon-delete.svg" alt="delete">
         </div>
-        <button class="cart-modal__delete">Checkout</button>`;
+        <button class="cart-modal__delete" id="checkout">Checkout</button>`;
     deleteProduct();
     let priceModal = document.querySelector(".cart-modal__details-price");
     priceModal.innerHTML = `$125.00 ${'x' + userInputNumber} <span>$${userInputNumber*125}.00</span>`;
+    const checkoutBtn = document.getElementById("checkout");
+    const productCart = document.querySelector(".cart-modal__details-container");
+    checkoutBtn.addEventListener('click', () => {
+        productCart.style.display = 'none';
+        checkoutBtn.style.display = 'none';
+        productCheckout.style.display = 'block';
+    });
 }
 
 let thumbnails = document.querySelectorAll(".gallery__thumbnail");
 thumbnails = [...thumbnails];
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", Event=> {
-        imageContainer.style.backgroundImage = `url('images/image-product-${Event.target.id}.jpg')`;
+        imageContainer.style.backgroundImage = `url('images/image-product-${Event.target.id}.webp')`;
     })
 })
 
@@ -140,7 +150,8 @@ let Modalthumbnails = document.querySelectorAll(".modal-gallery__thumbnail");
 Modalthumbnails = [...Modalthumbnails];
 Modalthumbnails.forEach(modalthumbnail => {
     modalthumbnail.addEventListener("click", Event=> {
-        modalImageContainer.style.backgroundImage = `url('images/image-product-${Event.target.id.slice(-1)}.jpg')`;
+        modalImageContainer.style.backgroundImage = `url('images/image-product-${Event.target.id.slice(-1)}.webp')`;
     })
 })
+
 
