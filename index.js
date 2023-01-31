@@ -154,4 +154,11 @@ Modalthumbnails.forEach(modalthumbnail => {
     })
 })
 
-
+function opcion() {
+    let opciones = document.getElementsByName('elecciones');
+    for(let i = 0; i < opciones.length; i++) {
+        if(opciones[i].checked) {
+        console.log(opciones[i].value);
+        }
+    }
+}

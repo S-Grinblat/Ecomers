@@ -490,20 +490,19 @@ body {
 }
 .sizes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 0fr));
     gap: 15px;
+    justify-items: legacy;
+    background-color: var(--primary-Pale-orange);
+    border-radius: 30px;
 }
 .sizes-button {
-    background-color: var(--primary-Pale-orange);
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
-    color: var(--primary-Orange);
-    font-size: 1.1em;
+    position: relative;
+    left: 50%;
     cursor: pointer;
 }
 .sizes-button:active {
-    background-color: var(--Black-modal);
+    background-color: red;
 }
 .details-product {
     font-size: 1.2rem;
