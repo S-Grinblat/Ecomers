@@ -490,19 +490,19 @@ body {
 }
 .sizes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 0fr));
+    grid-template-columns: repeat(auto-fill, minmax(110px, 0fr));
     gap: 15px;
-    justify-items: legacy;
+    justify-items: center;
     background-color: var(--primary-Pale-orange);
     border-radius: 30px;
+    padding: 10px;
+    font-size: 16px;
 }
 .sizes-button {
     position: relative;
-    left: 50%;
+    left: 25%;
+    font-size: 15px;
     cursor: pointer;
-}
-.sizes-button:active {
-    background-color: red;
 }
 .details-product {
     font-size: 1.2rem;
