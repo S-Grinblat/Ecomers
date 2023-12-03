@@ -7,6 +7,7 @@
   <meta content="Ecomers"> 
   <meta name="description" content="Ecomers de Zapatillas en donde se puede ver y comprar el producto">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="/images/icon-cart-white.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <title>E-commerce product page</title>
 </head>
@@ -43,7 +44,7 @@
       <div class="header__cart-avatar">
         <div class="header__cart">
           <div class="header__cart--notification">0</div>
-          <img class="header-icon-carrito" src="images/icon-cart.jpg" alt="carrito">
+          <img class="header-icon-carrito" src="images/icon-cart.jpg" loading="lazy" alt="carrito">
         </div>
         <img class="header__avatar" src="images/image-avatar.png" alt="Avatar">
       </div>
@@ -56,10 +57,10 @@
           <img class="gallery__next" src="svg/icon-next.svg" alt="Next">
         </div>
         <div class="gallery__thumbnails">
-          <img id="1" class="gallery__thumbnail" src="images/image-product-1-thumbnail.webp" alt="thumbnail">
-          <img id="2" class="gallery__thumbnail" src="images/image-product-2-thumbnail.webp" alt="thumbnail">
-          <img id="3" class="gallery__thumbnail" src="images/image-product-3-thumbnail.webp" alt="thumbnail">
-          <img id="4" class="gallery__thumbnail" src="images/image-product-4-thumbnail.webp" alt="thumbnail">
+          <img id="1" class="gallery__thumbnail" loading="lazy" src="images/image-product-1-thumbnail.webp" alt="thumbnail">
+          <img id="2" class="gallery__thumbnail" loading="lazy" src="images/image-product-2-thumbnail.webp" alt="thumbnail">
+          <img id="3" class="gallery__thumbnail" loading="lazy" src="images/image-product-3-thumbnail.webp" alt="thumbnail">
+          <img id="4" class="gallery__thumbnail" loading="lazy" src="images/image-product-4-thumbnail.webp" alt="thumbnail">
         </div>
       </article>
 
@@ -90,7 +91,7 @@
       <p class="cart-modal__title">Cart</p>
       <div class="cart-modal__chekout-container">
         <div class="cart-modal__details-container">
-          <img class="cart-modal__image" src="images/image-product-1-thumbnail.webp" alt="image product">
+          <img class="cart-modal__image" src="images/image-product-1-thumbnail.webp" loading="lazy" alt="image product">
           <div>
             <p class="cart-modal__details-product">Autumn Limited Edition...</p>
             <p class="cart-modal__details-price">$125.00 x3 <span>375.00</span> </p>
@@ -121,10 +122,10 @@
           <img class="modal-gallery__next" src="svg/icon-next.svg" alt="Next">
         </div>
         <div class="modal-gallery__thumbnails">
-          <img id="m1" class="modal-gallery__thumbnail" src="images/image-product-1-thumbnail.webp" alt="thumbnail">
-          <img id="m2" class="modal-gallery__thumbnail" src="images/image-product-2-thumbnail.webp" alt="thumbnail">
-          <img id="m3" class="modal-gallery__thumbnail" src="images/image-product-3-thumbnail.webp" alt="thumbnail">
-          <img id="m4" class="modal-gallery__thumbnail" src="images/image-product-4-thumbnail.webp" alt="thumbnail">
+          <img id="m1" class="modal-gallery__thumbnail" src="images/image-product-1-thumbnail.webp" loading="lazy" alt="thumbnail">
+          <img id="m2" class="modal-gallery__thumbnail" src="images/image-product-2-thumbnail.webp" loading="lazy" alt="thumbnail">
+          <img id="m3" class="modal-gallery__thumbnail" src="images/image-product-3-thumbnail.webp" loading="lazy" alt="thumbnail">
+          <img id="m4" class="modal-gallery__thumbnail" src="images/image-product-4-thumbnail.webp" loading="lazy" alt="thumbnail">
         </div>
       </article>
     </div>
@@ -143,7 +144,7 @@
           <div>
             <label for="seleccion" class="label">
               <form action="" class="sizes">
-                <input  type="radio" name="elecciones" class="sizes-button" onclick="opcion()">36(US 4.5)</>
+                <input  type="radio" name="elecciones" class="sizes-button" onclick="opcion()">36(US 4.5)</fo>
                 <input  type="radio" name="elecciones" class="sizes-button" onclick="opcion()">36.5(US 5)</>
                 <input  type="radio" name="elecciones" class="sizes-button" onclick="opcion()">37.5(US 5.5)</>
                 <input  type="radio" name="elecciones" class="sizes-button" onclick="opcion()">38(US 6)</>
@@ -162,19 +163,19 @@
 
         <section class="info">
           <div class="container-details__product">
-            <img src="images/pedidos.jpg" alt="pedido" class="icon-details__product">
+            <img src="images/pedidos.jpg" loading="lazy" alt="pedido" class="icon-details__product">
             <p class="details-product">Free Shipping</p>
           </div>
           <div class="container-details__product">
-            <img src="images/dinero.jpg" alt="dinero" class="icon-details__product">
+            <img src="images/dinero.jpg" loading="lazy" alt="dinero" class="icon-details__product">
             <p class="details-product">Pay up to 3 installments without interest</p>
           </div>
           <div class="container-details__product">
-            <img src="images/pedido.jpg" alt="caja" class="icon-details__product">
+            <img src="images/pedido.jpg" loading="lazy" alt="caja" class="icon-details__product">
             <p class="details-product">Free Returns</p>
           </div>
           <div class="container-details__product">
-            <img src="images/candado.jpg" alt=candado" class="icon-details__product">
+            <img src="images/candado.jpg" loading="lazy" alt=candado" class="icon-details__product">
             <p class="details-product">Protected Purchases</p>
           </div>
         </section>
